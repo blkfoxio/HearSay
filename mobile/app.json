@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "HearSay",
+    "slug": "hearsay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "hearsay",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6366F1"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hearsay.app",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "HearSay needs microphone access for speaking practice exercises.",
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6366F1"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.hearsay.app",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-apple-authentication",
+      "expo-secure-store",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "HearSay needs microphone access for speaking practice exercises."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "88f29ca1-e1a0-4ea5-9bbb-a3118e0f2ad6"
+      }
+    },
+    "owner": "mfarry87"
+  }
+}
